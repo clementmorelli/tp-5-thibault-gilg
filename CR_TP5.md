@@ -76,7 +76,19 @@ Lorsque l'on ping entre serveur et client, la communication fonctionne correctem
 
 ## Exercice 3 : Installation du serveur DHCP
 
-2. Pour vérifier que la configuration est correcte, il faut taper la commande ```ìp a``` qui affiche l'état des ports du serveur et leur adresse IP si elles sont été configurées. La configuration est bonne. 
+2. On utilise netplan en écrivant dans le dossier de configuration /etc/netplan/ pour attribuer de manière permanente l'adresse IP à l'interface du réseau interne.
+```
+network:
+    version: 2
+    renderer: NetworkManager (ou networkd)
+
+    ethernets:
+        enp0s8:
+            addresses:
+                - 192.168.100.1/24
+```
+
+Pour vérifier que la configuration est correcte, il faut taper la commande ```ìp a``` qui affiche l'état des ports du serveur et leur adresse IP si elles sont été configurées. La configuration est bonne. 
 
 3. Le "lease time" correspond au temps pendant lequel le serveur alloue une adresse IP à un client, dans le cadre du protocole DHCP. Ici, le temps précisé est en secondes. 
 
