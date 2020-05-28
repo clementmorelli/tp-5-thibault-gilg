@@ -8,6 +8,7 @@ Thibault GILG
 Pour cet exercice, on doit découper le réseau interne 172.16.0.0 /23 en 7 sous-réseaux pour un total de 254 machines. Ainsi, on ajuste la taille et l'adresse des réseaux en fonction du découpage imposé. Les sous-réseaux comportent tous (sauf SR7) entre 30 et 62 machines (2^5 - 2 < taille < 2^6 -2), donc nous pouvions commencer par quelconque sous-réseau. Voici donc le plan VLSM proposé :
 
 -   _Sous-réseau 1 : 38 machines_
+
     Adresse de sous réseau : 172.16.0.0 /26
     Adresse de broadcast : 172.16.0.63 /26
     Première machine configuréé : 172.16.0.1 /26  
