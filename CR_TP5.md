@@ -96,6 +96,8 @@ Pour vérifier que la configuration est correcte, il faut taper la commande ```�
 
 5. Après avoir validé la configuration du serveur, on vérifie que le serveur est actif par la commande ```systemctl status isc-dhcp-server```.
 
+6. Pour modifier le nom de la machine, saisissez la commande ```hostnamectl set-hostname client```.
+
 7. J'exécute la commande ```tail -f /var/log/syslog``` pour afficher les dernières lignes du fichier de log du système. Puis, j'active la carte réseau du client et je le lance. Trois lignes apparaissent en plus, commençant chacune respectivement par ```DHCPDISCOVER```, ```DHCPOFFER``` et ```DHCPREQUEST``` qui correspondent à :
 * ```DHCPDISCOVER``` : le client envoie par diffusion un message afin de trouver un serveur DHCP. S'il n'y a aucune réponse d'un serveur DHCP, alors le client s'attribue lui-même une adresse IP.
 * ```DHCPOFFER``` : réponse d'un serveur DHCP lorsqu'il reçoit un message ```DHCPDISCOVER``` contenant  une adresse IPV4 libre qui est alloué au client
