@@ -8,48 +8,47 @@ Thibault GILG
 Pour cet exercice, on doit découper le réseau interne 172.16.0.0 /23 en 7 sous-réseaux pour un total de 254 machines. Ainsi, on ajuste la taille et l'adresse des réseaux en fonction du découpage imposé. Les sous-réseaux comportent tous (sauf SR7) entre 30 et 62 machines (2^5 - 2 < taille < 2^6 -2), donc nous pouvions commencer par quelconque sous-réseau. Voici donc le plan VLSM proposé :
 
 -   _Sous-réseau 1 : 38 machines_
-
     Adresse de sous réseau : 172.16.0.0 /26
     Adresse de broadcast : 172.16.0.63 /26
-    Première machine configuréé : 172.16.0.1 /26  
+    Première machine configurée : 172.16.0.1 /26  
     Dernière machine configurée : 172.16.0.62 /26
     
 -   _Sous-réseau 2 : 33 machines_  
     Adresse de sous réseau : 172.16.0.64 /26
     Adresse de broadcast : 172.16.0.127 /26
-    Première machine configuréé : 172.16.0.65 /26
+    Première machine configurée : 172.16.0.65 /26
     Dernière machine configurée : 172.16.0.126 /26
     
 -   _Sous-réseau 3 : 52 machines_  
     Adresse de sous réseau : 172.16.0.128 /26
     Adresse de broadcast : 172.16.0.191 /26
-    Première machine configuréé : 172.16.0.129 /26 
+    Première machine configurée : 172.16.0.129 /26 
     Dernière machine configurée : 172.16.0.190 /26
     
 -   _Sous-réseau 4 : 35 machines_  
     Adresse de sous réseau : 172.16.0.192 /26
     Adresse de broadcast : 172.16.0.255 /26
-    Première machine configuréé : 172.16.0.193 /26 
+    Première machine configurée : 172.16.0.193 /26 
     Dernière machine configurée : 172.16.0.254 /26
     
 -   _Sous-réseau 5 : 34 machines_  
     Adresse de sous réseau : 172.16.1.0 /26
     Adresse de broadcast : 172.16.1.63 /26
-    Première machine configuréé : 172.16.1.1 /26 
+    Première machine configurée : 172.16.1.1 /26 
     Dernière machine configurée : 172.16.1.62 /26
     
 -   _Sous-réseau 6 : 37 machines_  
     Adresse de sous réseau : 172.16.1.64 /26
     Adresse de broadcast : 172.16.1.127 /26
-    Première machine configuréé : 172.16.1.65 /26  
+    Première machine configurée : 172.16.1.65 /26  
     Dernière machine configurée :172.16.1.126 /26
 
-Pour le dernier sous-réseau, j'ai considéré un masque /27 comme on nécessitait de moins de 30 machines.
+Pour le dernier sous-réseau, j'ai considéré un masque /27 comme on avait besoin de moins de 30 machines.
   
 -   _Sous-réseau 7 : 25 machines_  
     Adresse de sous réseau : 172.16.1.128 /27 
     Adresse de broadcast : 172.16.1.159 /27
-    Première machine configuréé :172.16.1.129 /27 
+    Première machine configurée :172.16.1.129 /27 
     Dernière machine configurée :172.16.1.158 /27
 
 ## Exercice 2
